@@ -1,7 +1,7 @@
 9 Lesson. Ansible
 ---------------
 
-1.Install software:
+##1.Install software:
 ```
 ansible@ansible-ctl:~/ansible_lesson$ ansible-playbook pack_install.yml -i inventory -l web
 
@@ -36,7 +36,7 @@ ansible1                   : ok=6    changed=3    unreachable=0    failed=0    s
 ansible2                   : ok=6    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 ```
 
-2Create user.
+##2.Create user
 ```
 ansible@ansible-ctl:~/ansible_lesson$ ansible-playbook create_user.yml -i inventory -l web
 
@@ -68,7 +68,7 @@ ansible1                   : ok=5    changed=4    unreachable=0    failed=0    s
 ansible2                   : ok=5    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 ```
 
-3.Get server info:
+##3.Get server info:
 ```
 ansible@ansible-ctl:~/ansible_lesson$ ansible-playbook hw_info.yml -i inventory -l web
 

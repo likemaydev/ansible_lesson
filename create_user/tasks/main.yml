@@ -1,0 +1,26 @@
+- name: Add group "students" to remote server
+  group:
+    name: students
+    gid: 2012
+    state: present 
+
+- name: Add user "student" to remote server
+  user:
+    name: student
+    comment: "9 Lesson User"
+    uid: 2001
+    group: students
+    append: yes
+    shell: /bin/bash
+    password: asdqwe123
+
+- name: Create directory test_dir1
+  file:
+     path: /home/student/test_dir1
+     state: directory
+
+- name: Create directory test_dir2
+  file:
+     path: /home/student/test_dir2
+     state: directory
+

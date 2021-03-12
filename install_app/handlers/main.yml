@@ -1,0 +1,12 @@
+---
+- name: nginx systemd
+  systemd:
+    name: nginx
+    enabled: yes
+    state: started
+
+- name: proftpd systemd
+  systemd:
+    name: proftpd
+    enabled: yes
+    state: started

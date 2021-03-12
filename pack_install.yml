@@ -1,0 +1,13 @@
+---
+- hosts: 
+    web
+  become:
+    true
+  become_method:
+    sudo
+  become_user:
+    root
+  remote_user:
+    ansible
+  roles:
+   - install_app

@@ -1,0 +1,28 @@
+ansible@ansible-ctl:~/ansible_lesson$ ansible-playbook create_user.yml -i inventory -l web
+
+PLAY [web] ***********************************************************************************************************************************************
+
+TASK [Gathering Facts] ***********************************************************************************************************************************
+ok: [ansible1]
+ok: [ansible2]
+
+TASK [create_user : Add group "students" to remote server] ***********************************************************************************************
+changed: [ansible1]
+changed: [ansible2]
+
+TASK [create_user : Add user "student" to remote server] *************************************************************************************************
+[WARNING]: The input password appears not to have been hashed. The 'password' argument must be encrypted for this module to work properly.
+changed: [ansible1]
+changed: [ansible2]
+
+TASK [create_user : Create directory test_dir1] **********************************************************************************************************
+changed: [ansible1]
+changed: [ansible2]
+
+TASK [create_user : Create directory test_dir2] **********************************************************************************************************
+changed: [ansible1]
+changed: [ansible2]
+
+PLAY RECAP ***********************************************************************************************************************************************
+ansible1                   : ok=5    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+ansible2                   : ok=5    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0

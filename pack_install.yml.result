@@ -1,0 +1,31 @@
+ansible@ansible-ctl:~/ansible_lesson$ ansible-playbook pack_install.yml -i inventory -l web
+
+PLAY [web] ***********************************************************************************************************************************************
+
+TASK [Gathering Facts] ***********************************************************************************************************************************
+ok: [ansible1]
+ok: [ansible2]
+
+TASK [install_app : Install Nginx Web Server on Debian Family] *******************************************************************************************
+changed: [ansible1]
+changed: [ansible2]
+
+TASK [install_app : Install nano] ************************************************************************************************************************
+changed: [ansible1]
+changed: [ansible2]
+
+TASK [install_app : Install ftp-server] ******************************************************************************************************************
+changed: [ansible1]
+changed: [ansible2]
+
+RUNNING HANDLER [install_app : nginx systemd] ************************************************************************************************************
+ok: [ansible1]
+ok: [ansible2]
+
+RUNNING HANDLER [install_app : proftpd systemd] **********************************************************************************************************
+ok: [ansible1]
+ok: [ansible2]
+
+PLAY RECAP ***********************************************************************************************************************************************
+ansible1                   : ok=6    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+ansible2                   : ok=6    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
